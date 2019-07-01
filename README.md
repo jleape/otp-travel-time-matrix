@@ -43,11 +43,11 @@ Most of the files you need are in this repository already. The other files you c
 #### Step 3: Build Graph.obj
 Open your Command Prompt and run this line to set the directory where you've saved the files
 
-`cd C:\Users\rafa\Desktop\otp-travel-time-matrix`
+`cd path/to/otp-travel-time-matrix`
 
 Now run this line to build the Graph.obj. Once OTP has built the Graph.obj, move it to the subdirectory `portland`.
 
-`java –Xmx10G -jar otp-1.3.0-shaded.jar --cache C:\Users\rafa\Desktop\otp-travel-time-matrix --basePath C:\Users\rafa\Desktop\otp-travel-time-matrix --build C:\Users\rafa\Desktop\otp-travel-time-matrix`
+`java -Xmx4G -jar otp-1.3.0-shaded.jar --cache . --basePath . --build .`
 
 
 #### Step 4: Run the Python script
