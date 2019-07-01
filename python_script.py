@@ -6,7 +6,7 @@ now = datetime.datetime.now()
 
 # Define script arguments
 parser = argparse.ArgumentParser()
-parser.add_argument('--graph', default = '.')
+parser.add_argument('--graph', default = 'graphs')
 parser.add_argument('--date', nargs = 3, type=int, default = [2015, 9, 15]) # default = [now.year, now.month, now.day])
 parser.add_argument('--time', nargs = 3, type=int, default = [10, 00, 00]) # [now.hour, now.minute, now.second])
 parser.add_argument('--points', default = 'points.csv')
@@ -91,7 +91,7 @@ for origin in origins:
     # getCost(GraphPath)
 
 # Save the result
-matrixCsv.save(args.output_file)
+matrixCsv.save('./outputs/' + args.output_file)
 
 # Stop timing the code
 print("Elapsed time was %g seconds" % (time.time() - start_time))
